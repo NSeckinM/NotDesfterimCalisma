@@ -1,0 +1,17 @@
+﻿@model Note
+
+
+
+<form asp-controller="Notlar" asp-action="Yeni" method="post">
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Content"></label>
+        <textarea asp-for="Content" class="form-control" style="height:300px;"></textarea>
+        <span asp-validation-for="Content" class="text-danger"></span>
+    </div>
+    <button class="btn btn-primary">Ekle</button>
+</form>

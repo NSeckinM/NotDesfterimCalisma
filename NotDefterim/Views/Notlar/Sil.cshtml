@@ -1,0 +1,13 @@
+﻿@model Note
+
+<form asp-controller="Notlar" asp-action="Sil" method="post">
+    <div>
+        <input asp-for="Id" type="hidden" />
+        <span> @Model.Content  içerikli @Model.Title' notu silinecektir onaylıyor musunuz ?  </span>
+    </div>
+    <div>
+        <button class="btn btn-danger m-3">Evet, Sil</button>
+        <a asp-controller="Home" asp-action="Index" class="btn btn-secondary m-3">Geri Dön</a>
+    </div>
+
+</form>
